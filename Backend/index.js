@@ -8,17 +8,25 @@ import mongoose from 'mongoose'
 
 const app=express()
 
+// config dotenv
+dotenv.config()
 // middleware
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors())
+// app.use(cors(
+//     {
+//       origin:['http://localhost:5173/'],
+//       method:["POST","GET","PUT","DELETE"],
+//       credentials:true
+//     }
+//   ))
 
 // routes
 app.use('/api/v1/user',UserRouter)  
 app.use('/api/v1/vehicle',VehicleRoute)
 
-// config dotenv
-dotenv.config()
+
 
 // Connect to the database
 mongoose

@@ -5,10 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "node server.js",
+    "server": "node index.js",
     "client": "npm run dev --prefix ../Frontend",
-    "dev": "nodemon server.js",
-    "start": "concurrently \"npm run dev\" \"npm run client\""
+    "dev": "nodemon index.js",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
