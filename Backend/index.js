@@ -16,7 +16,7 @@ app.use(morgan('dev'))
 // app.use(cors())
 app.use(cors(
     {
-      origin:['https://frontend-parkingapp.vercel.app'],
+      origin:["https://frontend-parkingapp.vercel.app"],
       method:["POST","GET","PUT","DELETE"],
       credentials:true
     }
