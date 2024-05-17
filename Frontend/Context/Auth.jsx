@@ -5,7 +5,7 @@ const Authcontext = createContext();
 const AuthProvider = ({ children }) => {
   const [authDetails, setAuthDetails] = useState({ user: "", token: "" });
   // axios.defaults.baseURL = "http://localhost:4001";
-  axios.defaults.baseURL = import.meta.env.VITE_SERVER_PROXY
+  axios.defaults.baseURL = "https://backend-parkingapp.vercel.app"
 
   axios.defaults.headers.common["Authorization"] = authDetails.token;
   axios.defaults.headers.common["Content-Type"] = "application/json"
