@@ -13,14 +13,14 @@ dotenv.config()
 // middleware
 app.use(express.json())
 app.use(morgan('dev'))
-app.use(cors())
-// app.use(cors(
-//     {
-//       origin:['http://localhost:5173/'],
-//       method:["POST","GET","PUT","DELETE"],
-//       credentials:true
-//     }
-//   ))
+// app.use(cors())
+app.use(cors(
+    {
+      origin:['https://frontend-parkingapp.vercel.app/'],
+      method:["POST","GET","PUT","DELETE"],
+      credentials:true
+    }
+  ))
 
 // routes
 app.use('/api/v1/user',UserRouter)  
