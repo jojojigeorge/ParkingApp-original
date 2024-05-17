@@ -36,7 +36,6 @@ const PrivateRoute = () => {
         url='/api/v1/user/user-auth'
       }
       const res = await axios.get(`${url}`);
-      console.log('userCheck res',res)
       if (res.data.ok) {
         setOk(true);
       }
